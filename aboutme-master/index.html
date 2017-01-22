@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <title>LearnIt</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="icon" href="favicon.ico">
+  <link href="css/bootstrap.min.css" rel="stylesheet">
+  <link href="css/style.css" rel="stylesheet">
+  <script src="https://use.fontawesome.com/711a8a98c0.js"></script>
+</head>
+
+<body>
+  <!-- Site Wrapper -->
+  <div class="site-wrapper">
+
+    <!-- Navbar -->
+    <nav class="inner">
+      <ul class="nav nav-inline nav-masthead" role="tablist">
+        <li class="nav-item">
+          <a class="nav-link active" data-toggle="tab" href="#aboutme" role="tab">Home</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#projects" role="tab">Course Work</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" data-toggle="tab" href="#contact" role="tab">Contact</a>
+        </li>
+      </ul>
+    </nav><!-- End of Navbar -->
+
+    <!-- Tab Contents -->
+    <div class="tab-content inner">
+
+      <!-- About Me -->
+      <div class="tab-pane fade in active vertical-align" id="aboutme" role="tabpanel">
+        <div class="container-fluid">
+          <p class="title">LearnIt</p>
+          <p class="lead">Accelarate Your Carrer by Learning <strong>Web Development</strong></p>
+          <hr>
+          <p class="text-xs-center">HTML · CSS · JavaScript · Bootstrap · Knockout.js</p>
+        </div>
+      </div><!-- End of About Me -->
+
+      <!-- Projects -->
+      <div class="tab-pane fade" id="projects" role="tabpanel">
+        <div class="card-columns">
+          <!-- <div class="card card-block card-inverse card-primary">
+            <p class="h5">This personal page is built with <cite>Bootstrap 4</cite>.</p>
+          </div> -->
+          <!-- ko foreach: projects -->
+          <div class="card card-inverse card-project" data-bind="click: $parent.updateModal" data-toggle="modal" data-target="#Modal">
+            <img class="card-img-top img-fluid" data-bind="attr: { src: imgsrc, alt: title }">
+            <div class="card-block">
+              <h5 class="card-title" data-bind="text: title"></h5>
+              <p class="card-text" data-bind="text: details"></p>
+              <p class="card-text"><small class="text-muted">Last updated <span data-bind="text: lastupdated"></small></p>
+            </div>
+          </div>
+          <!-- /ko -->
+        </div>
+      </div><!-- End of Projects -->
+
+      <!-- Modal -->
+      <div class="modal fade" id="Modal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true" data-bind="with: modal">
+        <div class="modal-dialog" role="document">
+          <div class="modal-content">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+              <!-- ko if: gif --><img class="img-fluid" data-bind="attr: { src: gif, alt: title }"><!-- /ko -->
+              <!-- ko ifnot: gif--><img class="img-fluid" data-bind="attr: { src: imgsrc, alt: title }"><!-- /ko -->
+            </div>
+            <div class="modal-body">
+              <h5 class="modal-title" data-bind="text: title"></h5>
+              <ul class="list-inline skill" data-bind="foreach: { data: skills, as: 'skill' }">
+                <li class="list-inline-item text-muted" data-bind="text: skill"></li>
+              </ul>
+
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Contact -->
+      <div class="tab-pane fade vertical-align" id="contact" role="tabpanel">
+        <div class="container-fluid">
+          <p class="lead text-xs-center">Start course today and land Jobs in </p>
+          <p class="lead text-xs-center">The best tech comapnies</p>
+          <hr>
+          <p class="text-xs-center">Call: (+852) 6410-3054</p>
+          <p class="text-xs-center">Email: meswani.nishit@learnit.com</p>
+          <p class="text-xs-center">
+            <a href="">
+              <i class="fa fa-envelope-square fa-3x"></i>&nbsp;&nbsp;<span class="sr-only">Email</span>
+            </a>
+            <a href="">
+              <i class="fa fa-linkedin-square fa-3x"></i>&nbsp;&nbsp;<span class="sr-only">Linkedin</span>
+            </a>
+            <a href="">
+              <i class="fa fa-github-square fa-3x"></i>&nbsp;&nbsp;<span class="sr-only">GitHub</span>
+            </a>
+            <a href="">
+              <i class="fa fa-facebook-square fa-3x"></i>&nbsp;&nbsp;<span class="sr-only">Facebook</span>
+            </a>
+          </p>
+        </div>
+      </div><!-- End of Contact -->
+
+    </div><!-- End of Tab Contents -->
+
+    <!-- Footer -->
+    <footer class="footer">
+      <p class="text-xs-center">Created by Nishit Meswani</a></p>
+    </footer><!-- End of Footer -->
+
+  </div><!-- End of Site Wrapper -->
+
+  <script src="https://code.jquery.com/jquery-3.1.1.min.js"></script>
+  <script src="js/bootstrap.min.js"></script>
+  <script type='text/javascript' src='js/knockout-3.4.1.js'></script>
+  <script src="js/portfolio.js"></script>
+
+</body>
+</html>

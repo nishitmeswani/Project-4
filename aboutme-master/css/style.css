@@ -1,0 +1,170 @@
+/* Global*/
+html,
+body {
+  height: 100%;
+  overflow: hidden;
+}
+
+body {
+  color: #fff;
+  text-shadow: 0 .1rem .1rem rgba(0,0,0,.5);
+}
+
+a {
+  color: #97cdfd;
+}
+a:hover {
+  color: #59b0fa;
+  text-decoration: none;
+}
+
+.img-fluid {
+  width: 100%;
+}
+
+/* Site Content*/
+.site-wrapper {
+  background: #000 url('../img/beachcave.jpg') center center no-repeat;
+  background-size: cover;
+  width: 100%;
+  height: 100%; /* For at least Firefox */
+  min-height: 100%;
+}
+
+.inner {
+  overflow: hidden;
+  padding: 0 1rem;
+}
+
+@media (min-width: 720px) {
+  .inner {
+    width: 720px;
+    margin: 0 auto;
+  }
+  .nav-masthead {
+    float: right;
+  }
+}
+
+@media (min-width: 1200px) {
+  .inner {
+    width: 1000px;
+    margin: 0 auto;
+  }
+}
+
+/* Navbar */
+nav {
+  text-align: center;
+}
+
+.nav-masthead {
+  padding: 2rem 0;
+}
+
+.nav-masthead .nav-link {
+  padding: .25rem 0;
+  font-weight: bold;
+  color: rgba(255,255,255,.5);
+  border-bottom: .25rem solid transparent;
+}
+
+.nav-masthead .nav-link:hover {
+  border-bottom-color: rgba(255,255,255,.25);
+}
+
+.nav-masthead .nav-link + .nav-link {
+  margin-left: 1rem;
+}
+
+.nav-masthead .active {
+  color: #fff;
+  border-bottom-color: #fff;
+}
+
+/* Tab Content*/
+.tab-content {
+  height: calc(100% - 200px);
+  overflow-y: auto;
+}
+
+.tab-content::-webkit-scrollbar
+{
+  width: 0.5rem;
+  background-color: rgba(0,0,0,0.2);;
+  border-radius: 0.3rem;
+}
+.tab-content::-webkit-scrollbar-thumb
+{
+  background-color: rgba(151,205,253,0.4);
+  border-radius: 0.3rem;
+}
+
+.vertical-align {
+  position: relative;
+  top: 50%;
+  transform: perspective(1px) translateY(-50%);
+}
+
+.title {
+  font-size: 1.75rem;
+}
+@media (min-width: 375px) {
+  .title {
+    font-size: 2rem;
+  }
+}
+@media (min-width: 500px) {
+  .title {
+    font-size: 2.5rem;
+  }
+}
+
+@media (min-width: 576px) {
+  .card-columns {
+    column-count: 2;
+  }
+}
+
+@media (min-width: 1200px) {
+  .card-columns {
+    column-count: 3;
+  }
+}
+
+.card-primary {
+  background-color: rgba(2,117,216,0.8);
+}
+
+.card-project {
+  background-color: rgba(51,51,51,0.8);
+  border-color: rgb(51,51,51);"
+}
+.card-project:hover {
+  cursor: pointer;
+  cursor: hand;
+}
+
+/* Modal */
+.modal-body {
+  color: #141823;
+  text-shadow: none;
+}
+
+.skill li,
+.reflink li {
+  padding-right: 1.5rem;
+}
+
+.close {
+  font-size: 2.5rem;
+}
+
+/* Footer */
+.footer {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100px;
+  line-height: 100px;
+}
